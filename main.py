@@ -22,6 +22,7 @@ backend_dir = os.path.dirname(os.path.abspath(__file__))
 database_path = os.path.join(backend_dir, "database.db")
 engine = create_engine(f"sqlite:///{database_path}", echo=False)
 
+
 def ensure_aware(dt):
     """Ensure datetime is timezone-aware in UTC"""
     if dt is None:
